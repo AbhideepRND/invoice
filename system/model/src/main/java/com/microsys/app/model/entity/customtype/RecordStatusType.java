@@ -54,7 +54,7 @@ public class RecordStatusType implements UserType {
 	public void nullSafeSet(PreparedStatement arg0, Object arg1, int arg2,
 			SessionImplementor arg3) throws HibernateException, SQLException {
 		if (arg1 == null) {
-			arg0.setNull(arg2, Types.VARCHAR);
+			arg0.setString(arg2, RecordStatusEnum.Active.getDbCode());
 		} else {
 			RecordStatusEnum status = ((RecordStatusEnum) arg1);
 			arg0.setString(arg2, status.getDbCode());

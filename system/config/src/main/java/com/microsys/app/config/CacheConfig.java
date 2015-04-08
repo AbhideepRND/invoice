@@ -28,7 +28,7 @@ public class CacheConfig {
 	private CacheConfig() {
 		this.type = System.getProperty(CONFIG_TYPE);
 		final boolean workSpace = isWorkSpace();
-		final String configBase = seperator + appendPath("Config", "payroll");
+		final String configBase = seperator + appendPath("config", "microsys");
 		this.root = workSpace ? configBase : System.getProperty(CONFIG_ROOT) + configBase;
 		final String appEnv = System.getProperty(APP_ENV);
 		final String appDomain = System.getProperty(APP_DOMAIN);

@@ -26,7 +26,8 @@
 	<mvc:annotation-driven />
 	<aop:aspectj-autoproxy />
 
-
+	
+	
 	<bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
 		<property name="order" value="1" />
 		<property name="mediaTypes">
@@ -43,6 +44,7 @@
 				</bean>
 			</list>
 		</property>
+		
 		<!-- <property name="viewResolver">
 			<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 				<property name="prefix">
@@ -55,6 +57,6 @@
 		</property> -->
 
 	</bean>
-
+	
 </beans>
 

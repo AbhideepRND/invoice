@@ -2,7 +2,7 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 	<entry key="payroll.database.schema"><![CDATA[${system.database.schema}]]></entry>
-	<entry key="payroll.database.password"><![CDATA[Hello]]></entry>
-	<entry key="payroll.database.password"><![CDATA[Hello2]]></entry>
+	<entry key="payroll.database.password"><![CDATA[root]]></entry>
+	<entry key="payroll.database.password"><![CDATA[root]]></entry>
 	
 </properties>

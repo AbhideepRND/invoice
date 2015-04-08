@@ -3,6 +3,7 @@ package com.microsys.app.service.test;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -19,7 +20,8 @@ import com.microsys.app.model.entity.MicItem;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:spring/applicationContext.xml")
-@TransactionConfiguration(defaultRollback=false)
+@TransactionConfiguration(defaultRollback=true)
+@Ignore
 public class TestDatabase {
 
 	@PersistenceContext
@@ -34,6 +36,7 @@ public class TestDatabase {
 		
 		MicItem micItem = new MicItem();
 		micItem.setItemDesc("Hello");
+		micItem.setStatus(RecordStatusEnum.Active);
 		//micItem.setItemId(1);
 		manager.persist(micItem);
 	}
@@ -42,7 +45,7 @@ public class TestDatabase {
 	@Transactional(propagation=Propagation.REQUIRES_NEW, readOnly = false)
 	public void testDatabaseUpdateItem() {
 	
-		MicItem find = manager.find(MicItem.class, 9);
+		MicItem find = manager.find(MicItem.class, 9L);
 		System.out.println(find.getItemDesc());
 		
 		
@@ -71,6 +74,7 @@ public class TestDatabase {
 		
 		MicItem micItem = new MicItem();
 		micItem.setItemDesc("Hello");
+		micItem.setStatus(RecordStatusEnum.Active);
 		//micItem.setItemId(1);
 		//manager.persist(micAddress);
 		manager.persist(micCustomer);
@@ -86,7 +90,7 @@ public class TestDatabase {
 	public void testDatabaseRetrieveCustomer() {
 	
 		
-		MicCustomer find = manager.find(MicCustomer.class,1);
+		MicCustomer find = manager.find(MicCustomer.class,1L);
 		MicAddress addressList = find.getCustAddress();
 		System.out.println(addressList.getAddrLineOne());
 		

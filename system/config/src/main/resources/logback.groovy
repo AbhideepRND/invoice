@@ -30,15 +30,15 @@ appender("rootAppender", RollingFileAppender){
 	triggeringPolicy(SizeBasedTriggeringPolicy){ maxFileSize = fileSize}
 }
 
-appender("payrollAppender", RollingFileAppender){
-	file = logPath + "payroll"+ logFileSuffix;
+appender("microsysAppender", RollingFileAppender){
+	file = logPath + "microsys"+ logFileSuffix;
 	encoder(PatternLayoutEncoder) { pattern = logPattern; }
 	rollingPolicy(FixedWindowRollingPolicy){
 		maxIndex = 1;
-		fileNamePattern = logPath+"/payroll-%i-"+archiveLog;
+		fileNamePattern = logPath+"/microsys-%i-"+archiveLog;
 	}
 	triggeringPolicy(SizeBasedTriggeringPolicy){ maxFileSize = fileSize}
 }
 
 root(Level.valueOf(rootLoglevel), ["rootAppender"]);
-logger("com.payroll",Level.valueOf(payrollLoglevel), ["payrollAppender"],false);
+logger("com.microsys",Level.valueOf(payrollLoglevel), ["microsysAppender"],false);
