@@ -196,38 +196,45 @@ padding:1px 1px 1px 1px;
     margin: 0px 0;
     padding: 5px 0; 
 }
-.subHeader{
-	width:100%; hight:100px; background-color:#117c13; display: block;
-    font-size: 12px;
-    margin: 0px 0;
-    padding: 5px 0; 
-}
 .rightDivStyle{
 	 margin-left:2%; width:70%; height:400px;  border:1px solid; float:left;  
   padding-top:0px;
   padding-bottom:4px;
 }
-.rightDivStylePopup{
-	 margin-left:2%; width:95%; height:340px;  border:1px solid; float:left;  
-  padding-top:0px;
-  padding-bottom:4px;
+<!--
+/*
+ul {
+  padding:5px;
+  margin: 0;
+  list-style-type: none;
+  position: relative;
 }
-.fileUpload {
-	position: relative;
-	overflow: hidden;
-	margin: 10px;
+li {
+  list-style-type: none;
+  border-left: 2px solid #000;
+  margin-left: 1em;
+  padding:10px 0px 0px 0px;
 }
-.fileUpload input {
-	position: absolute;
-	top: 0;
-	right: 0;
-	margin: 0;
-	padding: 0;
-	font-size: 20px;
-	cursor: pointer;
-	opacity: 0;
-	filter: alpha(opacity=0);
+li div {
+  padding-left: 1em;
+  position: relative;
 }
+li div::before {
+  content:'';
+  position: absolute;
+  top: 0;
+  left: -2px;
+  bottom: 50%;
+  width: 0.75em;
+  border: 2px solid #000;
+  border-top: 0 none transparent;
+  border-right: 0 none transparent;
+}
+ul > li:last-child {
+  border-left: 2px solid transparent;
+  padding:0px 0px 0px 0px;
+}*/
+-->
 #wrapper{
     margin-left:auto;
     margin-right:auto;

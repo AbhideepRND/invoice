@@ -4,192 +4,29 @@
        "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
 
 <tiles-definitions>
-	
-	<!-- 
-		Index page configuration
-		
-	 -->
 
-	<definition name="index.definition"
-		template="/WEB-INF/pages/layout.jsp">
-		<put-attribute name="title" value="" />
-		<!-- <put-attribute name="header" value="/WEB-INF/jsp/include/index/header.jsp" /> -->
-		<!-- <put-attribute name="menu" value="/WEB-INF/jsp/include/index/menu.jsp" /> -->
-		<put-attribute name="body" value="" />
-		<!-- <put-attribute name="footer" value="/WEB-INF/jsp/include/index/footer.jsp" /> -->
-	</definition>
-	
-	<definition name="login" template="/WEB-INF/pages/login.jsp"/>
-		<!-- <put-attribute name="title" value="Payroll System" />
-		<put-attribute name="body" value="/WEB-INF/pages/login.jsp" />
-	</definition> -->
+	<!-- Index page configuration -->
 
-	<!-- 
-		Admin page for dashboard configuration
-		
-	 -->
-	
-	<!-- <definition name="admin.dashboard.definition"
-		template="/WEB-INF/pages/layout.jsp">
+	<definition name="login" template="/WEB-INF/pages/login.jsp" />
+
+	<!-- Admin page for dashboard configuration -->
+
+	<definition name="admin.dashboard.definition" template="/WEB-INF/pages/layout.jsp">
 		<put-attribute name="title" value="" />
-		<put-attribute name="header" value="/WEB-INF/jsp/include/header.jsp" />
-		<put-attribute name="menu" value="/WEB-INF/jsp/include/dashboard_menu.jsp" />
+		<put-attribute name="header" value="/WEB-INF/pages/include/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/pages/include/dashboard_menu.jsp" />
 		<put-attribute name="body" value="" />
-		<put-attribute name="footer" value="/WEB-INF/jsp/include/footer.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/pages/include/footer.jsp" />
 	</definition>
-	
-	
-	
+
+
+
 	<definition name="admin.dashboard" extends="admin.dashboard.definition">
-	<put-attribute name="title" value="Payroll System" />
-	<put-attribute name="body" value="/WEB-INF/jsp/dashboard_body.jsp" />
+		<put-attribute name="title" value="Payroll System" />
+		<put-attribute name="body" value="/WEB-INF/pages/dashboard_body.jsp" />
 	</definition>
-	
-	<definition name="admin.user" extends="admin.dashboard.definition">
-	<put-attribute name="title" value="Payroll System" />
-	<put-attribute name="body" value="/WEB-INF/jsp/tools/user/addUser.jsp" />
-	</definition>
-	
-	<definition name="admin.viewUser" extends="admin.dashboard.definition">
-	<put-attribute name="title" value="Payroll System" />
-	<put-attribute name="body" value="/WEB-INF/jsp/tools/user/viewUser.jsp" />
-	</definition>
-	
-	<definition name="admin.editUser" extends="admin.dashboard.definition">
-	<put-attribute name="title" value="Payroll System" />
-	<put-attribute name="body" value="/WEB-INF/jsp/tools/user/editUser.jsp" />
-	</definition>
-	
-	/****************************** Group  ***********************************/
-	
-	<definition name="admin.addGroup" extends="admin.dashboard.definition">
-	<put-attribute name="title" value="Payroll System" />
-	<put-attribute name="body" value="/WEB-INF/jsp/master/group/addGroup.jsp" />
-	</definition>
-	
-	<definition name="admin.viewGroup" extends="admin.dashboard.definition">
-	<put-attribute name="title" value="Payroll System" />
-	<put-attribute name="body" value="/WEB-INF/jsp/master/group/viewGroup.jsp" />
-	</definition>
-	
-	<definition name="admin.editGroup" extends="admin.dashboard.definition">
-	<put-attribute name="title" value="Payroll System" />
-	<put-attribute name="body" value="/WEB-INF/jsp/master/group/editGroup.jsp" />
-	</definition> -->
-	
-	<!-- /****************************** Employee Type  ***********************************/ -->
-	
-	<!-- <definition name="admin.addGroupType" extends="admin.dashboard.definition">
-	<put-attribute name="title" value="Payroll System" />
-	<put-attribute name="body" value="/WEB-INF/jsp/master/grouptype/addGroupType.jsp" />
-	</definition>
-	
-	<definition name="admin.viewGroupType" extends="admin.dashboard.definition">
-	<put-attribute name="title" value="Payroll System" />
-	<put-attribute name="body" value="/WEB-INF/jsp/master/grouptype/viewGroupType.jsp" />
-	</definition>
-	
-	<definition name="admin.editGroupType" extends="admin.dashboard.definition">
-	<put-attribute name="title" value="Payroll System" />
-	<put-attribute name="body" value="/WEB-INF/jsp/master/grouptype/editGroupType.jsp" />
-	</definition> -->
-	
-	<!-- /****************************** Add Department  ***********************************/ -->
-	
-	<!-- <definition name="admin.addDepartment" extends="admin.dashboard.definition">
-	<put-attribute name="title" value="Payroll System" />
-	<put-attribute name="body" value="/WEB-INF/jsp/master/department/addDepartment.jsp" />
-	</definition>
-	
-	<definition name="admin.viewDepartment" extends="admin.dashboard.definition">
-	<put-attribute name="title" value="Payroll System" />
-	<put-attribute name="body" value="/WEB-INF/jsp/master/department/viewDepartment.jsp" />
-	</definition>
-	
-	<definition name="admin.editDepartment" extends="admin.dashboard.definition">
-	<put-attribute name="title" value="Payroll System" />
-	<put-attribute name="body" value="/WEB-INF/jsp/master/department/editDepartment.jsp" />
-	</definition> -->
-	
-	<!-- /****************************** Add Company  ***********************************/ -->
-	
-	<!-- <definition name="admin.addCompany" extends="admin.dashboard.definition">
-	<put-attribute name="title" value="Payroll System" />
-	<put-attribute name="body" value="/WEB-INF/jsp/master/company/addCompany.jsp" />
-	</definition>
-	
-	<definition name="admin.viewCompany" extends="admin.dashboard.definition">
-	<put-attribute name="title" value="Payroll System" />
-	<put-attribute name="body" value="/WEB-INF/jsp/master/company/viewCompany.jsp" />
-	</definition>
-	
-	<definition name="admin.editCompany" extends="admin.dashboard.definition">
-	<put-attribute name="title" value="Payroll System" />
-	<put-attribute name="body" value="/WEB-INF/jsp/master/company/editCompany.jsp" />
-	</definition> -->
-	
-	<!-- /****************************** Add Occupation  ***********************************/ -->
-	
-	<!-- <definition name="admin.addOccupation" extends="admin.dashboard.definition">
-	<put-attribute name="title" value="Payroll System" />
-	<put-attribute name="body" value="/WEB-INF/jsp/master/occupation/addOccupation.jsp" />
-	</definition>
-	
-	<definition name="admin.viewOccupation" extends="admin.dashboard.definition">
-	<put-attribute name="title" value="Payroll System" />
-	<put-attribute name="body" value="/WEB-INF/jsp/master/occupation/viewOccupation.jsp" />
-	</definition>
-	
-	<definition name="admin.editOccupation" extends="admin.dashboard.definition">
-	<put-attribute name="title" value="Payroll System" />
-	<put-attribute name="body" value="/WEB-INF/jsp/master/occupation/editOccupation.jsp" />
-	</definition> -->
-	
-	
-	<!-- /****************************** Add Employee  ***********************************/ -->
-	
-	
-	<!-- /****************************** Employee Details  ***********************************/ -->
-	<!-- <definition name="admin.addEmployee" extends="admin.dashboard.definition">
-	<put-attribute name="title" value="Payroll System" />
-	<put-attribute name="body" value="/WEB-INF/jsp/master/employee/addEmployee.jsp" />
-	</definition> -->
-	
-	<!-- /****************************** Employee Address Details  ***********************************/ -->
-	<!-- <definition name="admin.addEmployeeAddress" extends="admin.dashboard.definition">
-	<put-attribute name="title" value="Payroll System" />
-	<put-attribute name="body" value="/WEB-INF/jsp/master/employee/addEmployeeAddress.jsp" />
-	</definition> -->
-	
-	<!-- /****************************** upload employee image ***********************************/ -->
-	<!-- <definition name="admin.uploadEmployeeImage" extends="index.definition">
-	<put-attribute name="title" value="Payroll System" />
-	<put-attribute name="body" value="/WEB-INF/jsp/master/employee/uploadEmployeeImage.jsp" />
-	</definition> -->
-	
-	<!-- /****************************** Employee Nominee Details  ***********************************/ -->
-	<!-- <definition name="admin.employeeNomineeDetail" extends="admin.dashboard.definition">
-	<put-attribute name="title" value="Payroll System" />
-	<put-attribute name="body" value="/WEB-INF/jsp/master/employee/employeeNomineeDetail.jsp" />
-	</definition> -->
-	
-	<!-- /****************************** Employee Bank Details  ***********************************/ -->
-	<!-- <definition name="admin.employeeBankDetail" extends="admin.dashboard.definition">
-	<put-attribute name="title" value="Payroll System" />
-	<put-attribute name="body" value="/WEB-INF/jsp/master/employee/employeeBankDetail.jsp" />
-	</definition> -->
-	
-	<!-- /****************************** Employee Salary Details  ***********************************/ -->
-	<!-- <definition name="admin.addEmployeeSalary" extends="admin.dashboard.definition">
-	<put-attribute name="title" value="Payroll System" />
-	<put-attribute name="body" value="/WEB-INF/jsp/master/employee/addEmployeeSalary.jsp" />
-	</definition> -->
-	
-	<!-- /****************************** Employee Summary  ***********************************/ -->
-	<!-- <definition name="admin.employeeSummary" extends="admin.dashboard.definition">
-	<put-attribute name="title" value="Payroll System" />
-	<put-attribute name="body" value="/WEB-INF/jsp/master/employee/employeeSummary.jsp" />
-	</definition> -->
-	
+
+
+
 
 </tiles-definitions>

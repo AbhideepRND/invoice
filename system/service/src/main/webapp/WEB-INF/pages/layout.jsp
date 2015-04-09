@@ -6,11 +6,11 @@
 	
 </head>
 <body >
-	<!-- <div id="container" style="width: auto;">  -->
-		<!-- <tiles:insertAttribute name="header" />
-		<tiles:insertAttribute name="menu" /> -->
+	<div id="container" style="width: auto;"> 
+		<tiles:insertAttribute name="header" />
+		<tiles:insertAttribute name="menu" />
 		<tiles:insertAttribute name="body" />
-		<!-- <tiles:insertAttribute name="footer" /> -->
-	<!-- </div>  -->
+		<tiles:insertAttribute name="footer" />
+	</div> 
 </body>
 </html>

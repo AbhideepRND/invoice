@@ -15,4 +15,5 @@
 		<entity class="com.microsys.app.model.entity.MicSale"></entity>
 		<entity class="com.microsys.app.model.entity.MicSaleDetl"></entity>
 		<entity class="com.microsys.app.model.entity.MicSeqNumber"></entity>
+		<entity class="com.microsys.app.model.entity.MicLogin"></entity>
 	</entity-mappings>

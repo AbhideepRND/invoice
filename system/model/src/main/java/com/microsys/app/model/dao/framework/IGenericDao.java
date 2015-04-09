@@ -1,4 +1,4 @@
-package com.microsys.app.model.dao;
+package com.microsys.app.model.dao.framework;
 
 import java.util.List;
 

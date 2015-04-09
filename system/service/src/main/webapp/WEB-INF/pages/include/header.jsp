@@ -4,7 +4,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<%@page import="java.util.Map" %>
 <title></title>
 <link href="css/main.css" rel="stylesheet" type="text/css" />
 <link href="css/styles.css" rel="stylesheet" type="text/css" />
@@ -53,12 +52,7 @@
    			 <img alt="" src="images/inv.png" />
 			 <h1 style="float:left; margin-top:3px;"><a href="#" style="text-decoration:none;color:#FFF" > &nbsp; Payroll System</a></h1>
              <h1 style="float:right; margin-top:3px; width:20%;"><a href="#" style="text-decoration:none;color:#FFF" >
-             <% Map<String,Object> userRecord=(Map<String,Object>)request.getSession().getAttribute("PAYROLL_USER");
-	  						out.print("Welcome "+userRecord.get("userName").toString().toUpperCase());
-	  						if(userRecord.get("companyName")!=null){
-	  							out.print(" to "+userRecord.get("companyName"));	
-	  						}
-	  		  %></a></h1>
+             </a></h1>
 	</div>
 <!--
 		Middle part of the top part

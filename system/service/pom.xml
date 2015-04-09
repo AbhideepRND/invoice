@@ -11,8 +11,8 @@
 	<packaging>war</packaging>
 	<dependencies>
 		<dependency>
-			<groupId>com.microsys.app.model</groupId>
-			<artifactId>model</artifactId>
+			<groupId>com.microsys.app.delegate</groupId>
+			<artifactId>delegate</artifactId>
 			<version>1.0.1</version>
 		</dependency>
 	</dependencies>

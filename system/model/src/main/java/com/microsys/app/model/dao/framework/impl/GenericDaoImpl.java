@@ -1,4 +1,4 @@
-package com.microsys.app.model.dao.impl;
+package com.microsys.app.model.dao.framework.impl;
 
 import java.lang.reflect.ParameterizedType;
 import java.util.List;
@@ -8,8 +8,8 @@ import javax.persistence.PersistenceContext;
 
 import org.springframework.aop.support.AopUtils;
 
-import com.microsys.app.model.dao.IGenericDao;
-import com.microsys.app.model.dao.IIdentityObject;
+import com.microsys.app.model.dao.framework.IGenericDao;
+import com.microsys.app.model.dao.framework.IIdentityObject;
 
 public abstract class GenericDaoImpl<E extends IIdentityObject<?>> implements IGenericDao<E> {
 
@@ -74,5 +74,7 @@ public abstract class GenericDaoImpl<E extends IIdentityObject<?>> implements IG
 			return (Class<E>) type.getActualTypeArguments()[0];
 		}
 	}
+	
+	protected abstract String getEntityName();
 
 }

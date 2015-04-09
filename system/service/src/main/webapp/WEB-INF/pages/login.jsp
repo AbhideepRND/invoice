@@ -1,16 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@include file="include/include.jsp" %>   
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title><spring:message code="com.microsys.title"/></title>
 </head>
-<%@include file="include/include.jsp" %>             
 <body style=" background: url(images/admin_bg2.gif) repeat-x; font:12px Verdana, Arial, Helvetica, sans-serif; color:#fff;" >
 <br>
 <br>
-
 <table  width="950" border="0" align="center" cellpadding="0" cellspacing="0">
 <form:form id="loginForm" action="validateUser.do" method="post" modelAttribute="login">
   <tr>
@@ -33,7 +32,7 @@
             <td style="background:url(images/admin_bg.jpg) repeat-y; padding:18px 0px 10px 0px;"><table width="320" border="0" align="center" cellpadding="0" cellspacing="0">
               
               <tr>
-                <td style="padding-top:5px;"><span style="padding-top:10px; padding-bottom:10px;color: #FFFFFF"><spring:message code="com.ncjmpayroll.jsp.login.username" /></span></td>
+                <td style="padding-top:5px;"><span style="padding-top:10px; padding-bottom:10px;color: #FFFFFF"><spring:message code="com.microsys.label.login.username" /></span></td>
                 <td align="left" valign="bottom" style="padding-top:10px;">
                 <form:input id = "loginUsername" path="userName" cssStyle="background:url(images/input_bg.gif) repeat-x; border:#cecece 1px solid;  width:155px;padding-left:2px; font:11px Verdana, Arial, Helvetica, sans-serif; color:#434343; height:17px;" />
                 </td>
@@ -42,7 +41,7 @@
                 <td colspan="2"><form:errors path="userName" /></td>
               </tr>
                <tr>
-                <td style="padding-top:5px;"><span style="padding-top:10px; padding-bottom:10px;color: #FFFFFF"><spring:message code="com.ncjmpayroll.jsp.login.password" /></span></td>
+                <td style="padding-top:5px;"><span style="padding-top:10px; padding-bottom:10px;color: #FFFFFF"><spring:message code="com.microsys.label.login.password" /></span></td>
                 <td align="left" valign="bottom" style="padding-top:10px;">
                 <form:password  id = "loginPassword" path="password" cssStyle="background:url(images/input_bg.gif) repeat-x; border:#cecece 1px solid;  width:155px; padding-left:2px; font:11px Verdana, Arial, Helvetica, sans-serif; color:#434343; height:17px;" />
                  </td> 
