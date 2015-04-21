@@ -5,6 +5,7 @@ import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.annotate.JsonTypeName;
 
 import com.microsys.app.common.customenum.CustCompEnum;
+import com.microsys.app.common.util.StringUtils;
 
 @JsonTypeName("Phone")
 public class PhoneDto {
@@ -17,6 +18,9 @@ public class PhoneDto {
 
 	@JsonProperty("Type")
 	private CustCompEnum type;
+	
+	@JsonProperty("Status")
+	private String status;
 
 	private int hashValue;
 	
@@ -49,7 +53,7 @@ public class PhoneDto {
 
 	@Override
 	public int hashCode() {
-		hashValue = phoneNo.hashCode() + type.getDbCode().hashCode();
+		hashValue = StringUtils.getHashCode(phoneNo)+ StringUtils.getHashCode(type.getDbCode());
 		return hashValue;
 	}
 	
@@ -57,5 +61,16 @@ public class PhoneDto {
 	public boolean equals(Object obj) {
 		return hashValue == ((PhoneDto)obj).hashCode() ? true : false;
 	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	@JsonIgnore
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	
+	
 	
 }

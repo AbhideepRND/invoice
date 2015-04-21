@@ -16,6 +16,7 @@ import org.hibernate.annotations.Type;
 import com.microsys.app.common.audit.BaseAuditEntity;
 import com.microsys.app.common.customenum.CustCompEnum;
 import com.microsys.app.common.customenum.RecordStatusEnum;
+import com.microsys.app.common.util.StringUtils;
 import com.microsys.app.model.entity.customtype.CustCompType;
 import com.microsys.app.model.entity.customtype.RecordStatusType;
 
@@ -142,6 +143,11 @@ public class MicAddress extends BaseAuditEntity implements Serializable {
 
 	public void setZipCode(String zipCode) {
 		this.zipCode = zipCode;
+	}
+	
+	@Override
+	public int hashCode() {
+		return StringUtils.getHashCode(addrLineOne) + StringUtils.getHashCode(addrLineTwo) + StringUtils.getHashCode(zipCode);
 	}
 
 }

@@ -5,6 +5,7 @@ import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.annotate.JsonTypeName;
 
 import com.microsys.app.common.customenum.CustCompEnum;
+import com.microsys.app.common.util.StringUtils;
 
 @JsonTypeName("Address")
 public class AddressDto {
@@ -73,7 +74,7 @@ public class AddressDto {
 
 	@Override
 	public int hashCode() {
-		hashValue = addrLineOne.hashCode() + addrLineTwo.hashCode() + zipCode.hashCode();
+		hashValue = StringUtils.getHashCode(addrLineOne) + StringUtils.getHashCode(addrLineTwo) + StringUtils.getHashCode(zipCode);
 		return hashValue;
 	}
 	

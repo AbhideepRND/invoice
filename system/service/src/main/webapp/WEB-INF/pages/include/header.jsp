@@ -85,43 +85,22 @@
 			         		<li><a href='viewCompany.do'><span>View Company</span></a></li>
 			         	</ul>
 			     </li>
-         		<li><a href='#'><span>Group</span></a>
+         		<li><a href='#'><span>Buyer</span></a>
 			         	<ul>
-			         		<li><a href='addGroup.do'><span>Add Group</span></a></li>
-			         		<li><a href='viewGroup.do'><span>View Group</span></a></li>
+			         		<li><a href='addBuyer.do'><span>Add Buyer</span></a></li>
+			         		<li><a href='viewBuyer.do'><span>View Buyer</span></a></li>
 			         	</ul>
 			     </li>
 			    
-         		<li><a href='#'><span>Employee Type</span></a>
+         		<li><a href='#'><span>Product</span></a>
          				<ul>
-			         		<li><a href='addEmployeeType.do'><span>Add Employee Type</span></a></li>
-			         		<li><a href='viewEmployeeType.do'><span>View Employee Type</span></a></li>
+			         		<li><a href='addProduct.do'><span>Add Product</span></a></li>
+			         		<li><a href='viewProduct.do'><span>View Product</span></a></li>
 			         	</ul>
 			    </li>
-         		<li><a href='#'><span>Department</span></a>
-         				<ul>
-			         		<li><a href='addDepartment.do'><span>Add Department</span></a></li>
-			         		<li><a href='viewDepartment.do'><span>View Department</span></a></li>
-			         	</ul>
-			     </li>
-			     <li><a href='#'><span>Occupation</span></a>
-         				<ul>
-			         		<li><a href='addOccupation.do'><span>Add Occupation</span></a></li>
-			         		<li><a href='viewOccupation.do'><span>View Occupation</span></a></li>
-			         	</ul>
-			     </li>
-         		<li><a href='#'><span>Employee</span></a>
-         				<ul>
-         					<li><a href='#'><span>Search Employee</span></a></li>
-			         		<li><a href='addEmployee.do'><span>Add Employee</span></a></li>
-			         		<li><a href='#'><span>View Employee</span></a></li>
-			         	</ul>
-			     </li>
-			    
       		</ul>
    		</li>
    			<li><a href='#'><span>Transaction</span></a></li>
-   			<li><a href='#'><span>Process</span></a></li>
    			<li><a href='#'><span>Report</span></a></li>
    			<li><a href='#'><span>Tools</span></a>
    					<ul>
@@ -150,6 +129,4 @@
    			<li><a href='logout.do'><span>Logout</span></a></li>
 	</ul>
 	</div> 
-	</div>
-	</body>
-	</html>
+	

@@ -17,9 +17,12 @@ import org.hibernate.annotations.Where;
 
 import com.microsys.app.common.audit.BaseAuditEntity;
 import com.microsys.app.common.customenum.CustCompEnum;
+import com.microsys.app.common.customenum.PhoneTypeEnum;
 import com.microsys.app.common.customenum.RecordStatusEnum;
+import com.microsys.app.common.util.StringUtils;
 import com.microsys.app.model.entity.MicCustomer;
 import com.microsys.app.model.entity.customtype.CustCompType;
+import com.microsys.app.model.entity.customtype.PhoneType;
 import com.microsys.app.model.entity.customtype.RecordStatusType;
 
 /**
@@ -41,7 +44,8 @@ public class MicPhoneCust extends BaseAuditEntity implements Serializable {
 	private String phoneNo;
 
 	@Column(name = "PHONE_TYPE")
-	private String phoneType;
+	@Type(type = PhoneType.PHONE_TYPE)
+	private PhoneTypeEnum phoneType;
 
 	@Column(name = "STATUS")
 	@Type(type = RecordStatusType.USER_TYPE)
@@ -72,11 +76,11 @@ public class MicPhoneCust extends BaseAuditEntity implements Serializable {
 		this.phoneNo = phoneNo;
 	}
 
-	public String getPhoneType() {
+	public PhoneTypeEnum getPhoneType() {
 		return this.phoneType;
 	}
 
-	public void setPhoneType(String phoneType) {
+	public void setPhoneType(PhoneTypeEnum phoneType) {
 		this.phoneType = phoneType;
 	}
 
@@ -98,6 +102,19 @@ public class MicPhoneCust extends BaseAuditEntity implements Serializable {
 
 	public boolean equals(MicPhoneCust obj) {
 		return this.phoneId == obj.getPhoneId() ? true : false;
+	}
+	
+	public CustCompEnum getType() {
+		return type;
+	}
+	
+	public void setType(CustCompEnum type) {
+		this.type = type;
+	}
+	
+	@Override
+	public int hashCode() {
+		return StringUtils.getHashCode(phoneNo) + StringUtils.getHashCode(type.getDbCode());
 	}
 
 }

@@ -20,6 +20,7 @@ import org.hibernate.annotations.Type;
 
 import com.microsys.app.common.audit.BaseAuditEntity;
 import com.microsys.app.common.customenum.RecordStatusEnum;
+import com.microsys.app.model.dao.framework.IIdentityObject;
 import com.microsys.app.model.entity.common.MicEmailComp;
 import com.microsys.app.model.entity.common.MicPhoneComp;
 import com.microsys.app.model.entity.customtype.RecordStatusType;
@@ -31,7 +32,7 @@ import com.microsys.app.model.entity.customtype.RecordStatusType;
 @Entity
 @Table(name = "mic_company")
 @NamedQuery(name = "MicCompany.findAll", query = "SELECT m FROM MicCompany m")
-public class MicCompany extends BaseAuditEntity implements Serializable {
+public class MicCompany extends BaseAuditEntity implements Serializable, IIdentityObject<Long> {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -192,4 +193,9 @@ public class MicCompany extends BaseAuditEntity implements Serializable {
 		return true;
 	}
 
+	@Override
+	public Long get() {
+		return compId;
+	}
+	
 }

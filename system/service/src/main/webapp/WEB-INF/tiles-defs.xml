@@ -20,13 +20,34 @@
 	</definition>
 
 
-
+<!-- 		Dashboard Details 								 -->
 	<definition name="admin.dashboard" extends="admin.dashboard.definition">
 		<put-attribute name="title" value="Payroll System" />
 		<put-attribute name="body" value="/WEB-INF/pages/dashboard_body.jsp" />
 	</definition>
 
+<!-- 		Company Details 								 -->	
+	<definition name="admin.addCompany" extends="admin.dashboard.definition">
+		<put-attribute name="title" value="Payroll System" />
+		<put-attribute name="body" value="/WEB-INF/pages/company/addCompany.jsp" />
+	</definition>
 
+	<definition name="admin.viewCompany" extends="admin.dashboard.definition">
+		<put-attribute name="title" value="Payroll System" />
+		<put-attribute name="body" value="/WEB-INF/pages/company/viewCompany.jsp" />
+	</definition>
+	
+<!-- 		Buyer Details 								 -->	
+	<definition name="admin.addBuyer" extends="admin.dashboard.definition">
+		<put-attribute name="title" value="Payroll System" />
+		<put-attribute name="body" value="/WEB-INF/pages/buyer/addBuyer.jsp" />
+	</definition>	
+
+	<!-- 		Item Details 								 -->	
+	<definition name="admin.addProduct" extends="admin.dashboard.definition">
+		<put-attribute name="title" value="Payroll System" />
+		<put-attribute name="body" value="/WEB-INF/pages/product/addProduct.jsp" />
+	</definition>	
 
 
 </tiles-definitions>

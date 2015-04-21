@@ -1,5 +1,6 @@
 package com.microsys.app.model.transformer.impl;
 
+import com.microsys.app.common.customenum.RecordStatusEnum;
 import com.microsys.app.common.exception.ApplicationException;
 import com.microsys.app.model.dto.AddressDto;
 import com.microsys.app.model.entity.MicAddress;
@@ -13,6 +14,7 @@ public class AddressTransformer extends BaseTransformer<AddressDto, MicAddress> 
 		domain.setCityId(dto.getCityId());
 		domain.setZipCode(dto.getZipCode());
 		domain.setType(dto.getType());
+		domain.setStatus(RecordStatusEnum.Active);
 		return domain;
 	}
 

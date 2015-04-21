@@ -18,6 +18,9 @@ public class EmailDto {
 	@JsonProperty("Type")
 	private CustCompEnum type;
 
+	@JsonProperty("Status")
+	private String status;
+
 	private int hashValue;
 
 	public String getEmailType() {
@@ -57,5 +60,16 @@ public class EmailDto {
 	public boolean equals(Object obj) {
 		return hashValue == ((EmailDto) obj).hashCode() ? true : false;
 	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	@JsonIgnore
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	
+	
 
 }

@@ -17,9 +17,12 @@ import org.hibernate.annotations.Where;
 
 import com.microsys.app.common.audit.BaseAuditEntity;
 import com.microsys.app.common.customenum.CustCompEnum;
+import com.microsys.app.common.customenum.EmailTypeEnum;
 import com.microsys.app.common.customenum.RecordStatusEnum;
+import com.microsys.app.common.util.StringUtils;
 import com.microsys.app.model.entity.MicCustomer;
 import com.microsys.app.model.entity.customtype.CustCompType;
+import com.microsys.app.model.entity.customtype.EmailType;
 import com.microsys.app.model.entity.customtype.RecordStatusType;
 
 /**
@@ -41,7 +44,8 @@ public class MicEmailCust extends BaseAuditEntity implements Serializable {
 	private String emailDetl;
 
 	@Column(name = "EMAIL_TYPE")
-	private String emailType;
+	@Type(type = EmailType.EMAIL_TYPE)
+	private EmailTypeEnum emailType;
 
 	@Column(name = "TYPE")
 	@Type(type = CustCompType.CUST_COMP)
@@ -72,11 +76,11 @@ public class MicEmailCust extends BaseAuditEntity implements Serializable {
 		this.emailDetl = emailDetl;
 	}
 
-	public String getEmailType() {
+	public EmailTypeEnum getEmailType() {
 		return this.emailType;
 	}
 
-	public void setEmailType(String emailType) {
+	public void setEmailType(EmailTypeEnum emailType) {
 		this.emailType = emailType;
 	}
 
@@ -108,12 +112,9 @@ public class MicEmailCust extends BaseAuditEntity implements Serializable {
 		this.customer = customer;
 	}
 
-	/*public MicCompany getCompany() {
-		return company;
+	@Override
+	public int hashCode() {
+		return StringUtils.getHashCode(emailDetl) + StringUtils.getHashCode(type.getDbCode());
 	}
-
-	public void setCompany(MicCompany company) {
-		this.company = company;
-	}*/
 
 }
